@@ -1,0 +1,37 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "aspcore2",
+      "camelcase": "AspCore2",
+      "title": "ASP-Core-2",
+      "scope": "source.aspcore2",
+      "file-types": [".asp", ".lp"],
+      "injection-regex": "^aspcore2$",
+      "class-name": "TreeSitterAspcore2"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "A tree-sitter grammar for the ASP-Core-2 input language format for ASP (Aswer Set Programming) systems.",
+    "authors": [
+      {
+        "name": "Amadé Nemes",
+        "email": "nemesamade@gmail.com"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/namcsi/tree-sitter-asp-core-2"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}
