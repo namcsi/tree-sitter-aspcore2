@@ -1,12 +1,628 @@
 [
   {
+    "type": "head",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "choice",
+        "named": true
+      },
+      {
+        "type": "disjunction",
+        "named": true
+      }
+    ]
+  },
+  {
+    "type": "term",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "anonymous_variable",
+        "named": true
+      },
+      {
+        "type": "binary_operation",
+        "named": true
+      },
+      {
+        "type": "function",
+        "named": true
+      },
+      {
+        "type": "number",
+        "named": true
+      },
+      {
+        "type": "parenthesized_term",
+        "named": true
+      },
+      {
+        "type": "string",
+        "named": true
+      },
+      {
+        "type": "unary_operation",
+        "named": true
+      },
+      {
+        "type": "variable",
+        "named": true
+      }
+    ]
+  },
+  {
+    "type": "aggregate",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "aggregate_elements",
+          "named": true
+        },
+        {
+          "type": "aggregate_function",
+          "named": true
+        },
+        {
+          "type": "lower",
+          "named": true
+        },
+        {
+          "type": "upper",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "aggregate_element",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "naf_literals",
+          "named": true
+        },
+        {
+          "type": "terms",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "aggregate_elements",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "aggregate_element",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "binary_operation",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "term",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "aggregate",
+          "named": true
+        },
+        {
+          "type": "naf",
+          "named": true
+        },
+        {
+          "type": "naf_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "builtin_atom",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "relation",
+          "named": true
+        },
+        {
+          "type": "term",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "choice",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "choice_elements",
+          "named": true
+        },
+        {
+          "type": "lower",
+          "named": true
+        },
+        {
+          "type": "upper",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "choice_element",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "classical_literal",
+          "named": true
+        },
+        {
+          "type": "naf_literals",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "choice_elements",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "choice_element",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "classical_literal",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "terms",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "disjunction",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "classical_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "function",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "terms",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "integrity_constraint",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "body",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "lower",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "relation",
+          "named": true
+        },
+        {
+          "type": "term",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "naf_literal",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "builtin_atom",
+          "named": true
+        },
+        {
+          "type": "classical_literal",
+          "named": true
+        },
+        {
+          "type": "naf",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "naf_literals",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "naf_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "parenthesized_term",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "term",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "rule",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "body",
+          "named": true
+        },
+        {
+          "type": "head",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "source_file",
     "named": true,
     "root": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "statement",
+          "named": true
+        }
+      ]
+    }
   },
   {
-    "type": "hello",
+    "type": "statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "integrity_constraint",
+          "named": true
+        },
+        {
+          "type": "rule",
+          "named": true
+        },
+        {
+          "type": "weak_constraint",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "terms",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "term",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unary_operation",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "term",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "upper",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "relation",
+          "named": true
+        },
+        {
+          "type": "term",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "weak_constraint",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "body",
+          "named": true
+        },
+        {
+          "type": "weight_at_level",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "weight_at_level",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "term",
+          "named": true
+        },
+        {
+          "type": "terms",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "*",
+    "named": false
+  },
+  {
+    "type": "+",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": "-",
+    "named": false
+  },
+  {
+    "type": ".",
+    "named": false
+  },
+  {
+    "type": "/",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": ":-",
+    "named": false
+  },
+  {
+    "type": ":~",
+    "named": false
+  },
+  {
+    "type": ";",
+    "named": false
+  },
+  {
+    "type": "@",
+    "named": false
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "]",
+    "named": false
+  },
+  {
+    "type": "aggregate_function",
+    "named": true
+  },
+  {
+    "type": "anonymous_variable",
+    "named": true
+  },
+  {
+    "type": "block_comment",
+    "named": true,
+    "extra": true
+  },
+  {
+    "type": "identifier",
+    "named": true
+  },
+  {
+    "type": "line_comment",
+    "named": true,
+    "extra": true
+  },
+  {
+    "type": "naf",
+    "named": true
+  },
+  {
+    "type": "number",
+    "named": true
+  },
+  {
+    "type": "relation",
+    "named": true
+  },
+  {
+    "type": "string",
+    "named": true
+  },
+  {
+    "type": "variable",
+    "named": true
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "|",
+    "named": false
+  },
+  {
+    "type": "}",
     "named": false
   }
 ]
