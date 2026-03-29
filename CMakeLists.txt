@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.13)
 project(tree-sitter-aspcore2
         VERSION "0.1.0"
         DESCRIPTION "A tree-sitter grammar for the ASP-Core-2 input language format for ASP (Aswer Set Programming) systems."
-        HOMEPAGE_URL "https://github.com/namcsi/tree-sitter-asp-core-2"
+        HOMEPAGE_URL "https://github.com/namcsi/tree-sitter-aspcore-2"
         LANGUAGES C)
 
 option(BUILD_SHARED_LIBS "Build using shared libraries" ON)

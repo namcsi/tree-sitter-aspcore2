@@ -22,7 +22,7 @@
       }
     ],
     "links": {
-      "repository": "https://github.com/namcsi/tree-sitter-asp-core-2"
+      "repository": "https://github.com/namcsi/tree-sitter-aspcore-2"
     }
   },
   "bindings": {

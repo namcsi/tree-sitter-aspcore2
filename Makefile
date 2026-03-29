@@ -1,5 +1,5 @@
 LANGUAGE_NAME := tree-sitter-aspcore2
-HOMEPAGE_URL := https://github.com/namcsi/tree-sitter-asp-core-2
+HOMEPAGE_URL := https://github.com/namcsi/tree-sitter-aspcore-2
 VERSION := 0.1.0
 
 # repository

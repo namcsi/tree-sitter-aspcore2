@@ -7,7 +7,7 @@ license = "MIT"
 readme = "README.md"
 keywords = ["incremental", "parsing", "tree-sitter", "aspcore2"]
 categories = ["parser-implementations", "parsing", "text-editors"]
-repository = "https://github.com/namcsi/tree-sitter-asp-core-2"
+repository = "https://github.com/namcsi/tree-sitter-aspcore-2"
 edition = "2021"
 autoexamples = false
 
