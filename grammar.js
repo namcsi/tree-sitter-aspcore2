@@ -10,7 +10,7 @@
 module.exports = grammar({
   name: "aspcore2",
 
-    supertypes: ($) => [$.head, $.term],
+  supertypes: ($) => [$.head, $.term],
 
   inline: ($) => [$.condition, $.body_literal],
 
