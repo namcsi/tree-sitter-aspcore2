@@ -27,7 +27,7 @@ module.exports = grammar({
 
     integrity_constraint: ($) => seq(":-", $.body, "."),
 
-      rule: ($) => seq($.head, optional(seq(":-", $.body)), "."),
+    rule: ($) => seq($.head, optional(seq(":-", $.body)), "."),
 
     weak_constraint: ($) => seq(":~", $.body, ".", "[", $.weight_at_level, "]"),
 
