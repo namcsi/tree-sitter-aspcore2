@@ -127,7 +127,7 @@ module.exports = grammar({
 
     string: (_) => token(/"([^"]|\\")*"/),
 
-    variable: (_) => token("[A-Z][A-Za-z0-9_]*"),
+    variable: (_) => token(/[A-Z][A-Za-z0-9_]*/),
 
     anonymous_variable: (_) => token("_"),
 
