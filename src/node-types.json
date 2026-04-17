@@ -201,7 +201,7 @@
       "required": true,
       "types": [
         {
-          "type": "classical_literal",
+          "type": "classical_atom",
           "named": true
         },
         {
@@ -227,7 +227,7 @@
     }
   },
   {
-    "type": "classical_literal",
+    "type": "classical_atom",
     "named": true,
     "fields": {},
     "children": {
@@ -254,7 +254,7 @@
       "required": true,
       "types": [
         {
-          "type": "classical_literal",
+          "type": "classical_atom",
           "named": true
         }
       ]
@@ -326,7 +326,7 @@
           "named": true
         },
         {
-          "type": "classical_literal",
+          "type": "classical_atom",
           "named": true
         },
         {

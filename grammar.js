@@ -46,7 +46,7 @@ module.exports = grammar({
       choice($.naf_literal, seq(optional($.naf), $.aggregate)),
 
     disjunction: ($) =>
-      seq($.classical_literal, repeat(seq("|", $.classical_literal))),
+      seq($.classical_atom, repeat(seq("|", $.classical_atom))),
 
     choice: ($) =>
       seq(optional($.lower), "{", $.choice_elements, "}", optional($.upper)),
@@ -57,7 +57,7 @@ module.exports = grammar({
     choice_elements: ($) =>
       seq($.choice_element, repeat(seq(";", $.choice_element))),
 
-    choice_element: ($) => seq($.classical_literal, optional($.condition)),
+    choice_element: ($) => seq($.classical_atom, optional($.condition)),
 
     aggregate: ($) =>
       seq(
@@ -83,9 +83,9 @@ module.exports = grammar({
     naf_literals: ($) => seq($.naf_literal, repeat(seq(",", $.naf_literal))),
 
     naf_literal: ($) =>
-      choice(seq(optional($.naf), $.classical_literal), $.builtin_atom),
+      choice(seq(optional($.naf), $.classical_atom), $.builtin_atom),
 
-    classical_literal: ($) =>
+    classical_atom: ($) =>
       seq(
         optional("-"),
         $.identifier,

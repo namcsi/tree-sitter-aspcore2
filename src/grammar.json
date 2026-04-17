@@ -253,7 +253,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "classical_literal"
+          "name": "classical_atom"
         },
         {
           "type": "REPEAT",
@@ -266,7 +266,7 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "classical_literal"
+                "name": "classical_atom"
               }
             ]
           }
@@ -370,7 +370,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "classical_literal"
+          "name": "classical_atom"
         },
         {
           "type": "CHOICE",
@@ -580,7 +580,7 @@
             },
             {
               "type": "SYMBOL",
-              "name": "classical_literal"
+              "name": "classical_atom"
             }
           ]
         },
@@ -590,7 +590,7 @@
         }
       ]
     },
-    "classical_literal": {
+    "classical_atom": {
       "type": "SEQ",
       "members": [
         {
